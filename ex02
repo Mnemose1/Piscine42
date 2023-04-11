@@ -1,0 +1,27 @@
+Execute os comandos:
+
+mkdir test0
+touch test1
+mkdir test2
+touch test3
+touch test4
+touch test5
+
+O comando mkdir cria files e o comando touch cria ficheiros.
+Execute o comando abaixo para criar um link entre o test0 e o test6:
+
+ln -s test0 test6
+
+Execute os comandos para mudar as permissões dos itens criados:
+
+chmod 715 test0
+chmod 714 test1
+chmod 504 test2
+chmod 404 test3
+chmod 641 test4
+chmod 404 test5
+
+E por ultimo compile:
+tar -cf exo2.tar *
+
+Submeta apenas o item compilado.
