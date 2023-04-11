@@ -1,0 +1,17 @@
+Use o comando:
+
+echo "41	string	42	42 file" > ft_magic
+
+chmod:
+chmod 455 testShell00 é um comando que altera as permissões do arquivo testShell00. O número 455 representa as permissões a serem definidas no arquivo em notação numérica. Nesta notação, os dígitos representam as permissões para o proprietário do arquivo, o grupo que possui o arquivo e todos os outros usuários, respectivamente.
+
+Nesse caso, 4 representa as permissões do proprietário, 5 representa as permissões do grupo e 5 representa as permissões de todos os outros usuários.
+
+As permissões são especificadas como um número octal de três dígitos, onde cada dígito corresponde a uma permissão específica:
+
+O primeiro dígito representa as permissões do proprietário, onde 4 significa permissão de leitura, 2 significa permissão de gravação e 1 significa permissão de execução.
+O segundo dígito representa as permissões do grupo, usando os mesmos códigos do primeiro dígito.
+O terceiro dígito representa as permissões para todos os outros usuários, usando os mesmos códigos do primeiro dígito.
+Portanto, 455 significa que o proprietário pode ler e executar o arquivo, o grupo pode ler e executar o arquivo e todos os outros usuários podem apenas ler o arquivo.
+
+Observe que chmod funciona apenas em sistemas baseados em Unix, como Linux e macOS, e apenas o proprietário de um arquivo ou um usuário com privilégios de superusuário pode alterar as permissões de um arquivo ou diretório.
