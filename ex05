@@ -1,0 +1,7 @@
+Abre o text editor (é um programa no pc mesmo, nao é no terminal)
+coloca o comando
+#!/bin/bash 
+git log --format='%H' -n5
+
+
+clica em salvar. Vai na pasta ex05 que tu criou e nomeia o arquivo como: git_commit.sh
