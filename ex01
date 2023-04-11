@@ -1,0 +1,5 @@
+executar o comandos:
+touch testShell00
+chmod 455 testShell00
+tar -cf testShell00.tar testShell00
+subir apenas o arquivo testShell00.tar
