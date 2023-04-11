@@ -1,0 +1,12 @@
+Abrir o aplicativo terminal com o usuário desejado. Abra o aplicativo terminal, e tenha certeza que esteja utilizando o usuário correto que deseja realizar a autenticação. Lembre-se de não utilizar o usuário root.
+Digite no terminal o comando, substituindo o email, pelo seu email registrado no perfil do github/gitlab: ssh-keygen -t rsa -b 4096 -C "meu-email@email.com.br"
+Selecione o local onde deseja salvar a chave. Se apertar enter (sem escrever nada), ela será salva na sua pasta home.
+Selecione uma senha (passphrase), para adicionar uma camada extra de segurança para sua chave, porém esta etapa é opcional. Você só irá precisar lembrar desta senha quando desejar alterá-la. Não é necessário lembrar e escrever ela toda vez que fizer a autenticação automática. Será perguntando novamente a senha, para confirmação. Será gerado então uma impressão digital do seu computador/servidor (key fingerprint).
+Para poder cadastrar sua chave no Gitlab ou github, você precisa acessar o arquivo id_rsa.pub (que é sua chave pública) , copiar todo seu interior e inserir na página de chaves. O início da chave deve começar com ssh-rsa e terminar com o seu email escolhido.
+Tenha atenção para não salvar a sua chave privada. O exercicio pede apenas a chave pública.
+Você deve atualizar a sua chave no seu perfil.
+
+Você pode ver mais detalhes aqui:
+https://viniciuspaes.com/mac-osx/tutorial-criar-chave-ssh-key-gitlab-github-mac-osx-linux-ubuntu/
+
+Use o comando echo "id_rsa_pub" > copie e cole a sua chave pública aqui.
