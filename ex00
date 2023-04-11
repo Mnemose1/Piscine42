@@ -1,0 +1,4 @@
+criar uma pasta chamada ex00
+executar o comando echo "Z" > z
+echo "" >> z
+subir esse arquivo Z
