@@ -5,8 +5,12 @@ encontrar . -type f -name "*.sh" é um comando que procura no diretório atual (
 
 -exec é um parâmetro que informa ao find para executar um comando em cada arquivo que corresponda aos critérios de pesquisa.
 
-basename {} .sh é o comando executado para cada arquivo correspondente. basename é um comando que retorna apenas a parte do nome do arquivo de um caminho, e o {} é um espaço reservado para o caminho para o arquivo correspondente. O argumento .sh para basename especifica que a extensão .sh deve ser removida do nome do arquivo.
+basename {} .sh é o comando executado para cada arquivo correspondente. basename é um comando que retorna apenas a parte do nome do arquivo de um caminho, 
+e o {} é um espaço reservado para o caminho para o arquivo correspondente. O argumento .sh para basename especifica que a extensão .sh deve ser removida do nome 
+do arquivo.
 
 \; é um delimitador que informa onde o comando -exec termina.
 
-Portanto, todo o script encontrará todos os arquivos no diretório atual e seus subdiretórios que possuem uma extensão .sh e imprimirá o nome base de cada arquivo sem a extensão .sh. Isso pode ser útil, por exemplo, se você quiser gerar uma lista de todos os scripts de shell em um diretório de projeto.
+Portanto, todo o script encontrará todos os arquivos no diretório atual e seus subdiretórios que possuem uma extensão .sh e 
+imprimirá o nome base de cada arquivo sem a extensão .sh. Isso pode ser útil, por exemplo, se você quiser gerar uma lista de todos os 
+scripts de shell em um diretório de projeto.
