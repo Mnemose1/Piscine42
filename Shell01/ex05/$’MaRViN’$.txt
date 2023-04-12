@@ -1,0 +1,14 @@
+Ficheiros para entregar : "\?$*’MaRViN’*$?\"
+na linha de comando executar: 
+echo "42" > '\?\$\*\'MaRViN'\*\$\?\' 
+
+Deixe-me explicar o que esse comando faz:
+
+echo "42" é um comando que imprime a string "42" no terminal.
+
+> é um operador de redirecionamento que redireciona a saída do comando echo para um arquivo.
+
+'\?\$\*\'MaRViN'\*\$\?\' é o nome do arquivo para o qual a saída será redirecionada. As barras invertidas () são usadas para escapar dos caracteres especiais no nome do arquivo, que incluem "?", "$", "*" e "'". Isso garante que esses caracteres sejam interpretados como parte do nome do arquivo, e não como caracteres especiais que afetam o comando.
+
+Portanto, quando você executar este comando, ele criará um arquivo chamado '?$*'MaRViN'*$?' no diretório atual, com o conteúdo "42". Você pode verificar isso executando o comando cat para exibir o conteúdo do arquivo:
+cat '\?\$\*\'MaRViN'\*\$\?\'

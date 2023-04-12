@@ -1,0 +1,12 @@
+#!/bin/bash
+find . | wc -l | sed 's/ //g'
+
+find . é um comando que procura no diretório atual (e seus subdiretórios) todos os arquivos e diretórios e retorna uma lista de seus caminhos.
+
+| é o símbolo de pipe, que pega a saída do comando anterior e a passa como entrada para o próximo comando.
+
+wc -l é um comando que conta o número de linhas de entrada que recebe. Nesse caso, ele contará o número de linhas geradas pelo comando find.
+
+sed 's/ //g' é um comando que realiza uma substituição na entrada que recebe. Nesse caso, ele substitui todas as ocorrências de espaços por nada (ou seja, exclui-os), usando a sintaxe s/ //g.
+
+O efeito geral do script é contar o número de arquivos e diretórios no diretório atual e seus subdiretórios e, em seguida, remover quaisquer espaços da saída. Isso pode ser útil, por exemplo, se você quiser gerar um resumo do conteúdo de um diretório.

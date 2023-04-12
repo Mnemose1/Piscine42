@@ -1,0 +1,11 @@
+#!/bin/bash
+echo $FT_NBR1 = \'\?\"\\\"\'\\ + $FT_NBR2=rcrdmddd | sed "s/\'/0/g" | tr '\\\"\?\!' 1234 | tr 'mrdoc' 01234 | xargs echo 'obase=13; ibase=5;' | bc | tr 0123456789ABC 'gtaio luSnemf'
+
+echo $FT_NBR1 = \'\?\"\\\"\'\\ + $FT_NBR2=rcrdmddd - Isso ecoa uma string que contém duas variáveis, $FT_NBR1 e $FT_NBR2. A primeira variável é definida como '\?\"\\\"\'\\ e a segunda é definida como rcrdmddd.
+sed "s/\'/0/g" - Isso usa o comando sed para substituir todas as ocorrências de aspas simples pelo número 0.
+tr '\\\"\?\!' 1234 - Isso usa o comando tr para substituir os caracteres \, ", ? e ! com os números 1, 2, 3 e 4, respectivamente.
+tr 'mrdoc' 01234 - Isso usa o comando tr para substituir os caracteres m, r, d, o e c pelos números 0, 1, 2, 3 e 4, respectivamente.
+xargs echo 'obase=13; ibase=5;' - Isso configura o comando echo para imprimir duas bases de conversão: obase=13 (base de saída 13) e ibase=5 (base de entrada 5).
+bc - Executa o comando bc (calculadora básica) para realizar a conversão usando as bases especificadas.
+tr 0123456789ABC 'gtaio luSnemf' - Usa o comando tr para substituir os números de 0 a 9 e as letras A, B e C pelas letras correspondentes g, t, a, i, o, , l, u, S, n , e, m e f.
+No geral, esse script parece pegar dois números em um formato específico, realizando algumas substituições de caracteres e conversões de base neles e, em seguida, exibindo o resultado como uma sequência de letras.

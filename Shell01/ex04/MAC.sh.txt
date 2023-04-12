@@ -1,0 +1,19 @@
+#!/bin/bash
+ifconfig | grep -w ether | cut -d " " -f 2
+
+ou
+
+ifconfig | grep 'ether' | awk '{print $2}' | tr -d "'"
+
+ifconfig é um comando que exibe informações sobre as interfaces de rede na máquina atual.
+
+| é o símbolo de pipe, que pega a saída do comando anterior e a passa como entrada para o próximo comando.
+
+grep -w ether é um comando que procura na saída do comando ifconfig linhas que contenham a palavra "ether" (que é um termo usado para se referir ao endereço Ethernet ou endereço MAC da interface de rede).
+
+cut -d " " -f 2 é um comando que extrai o segundo campo de cada linha de saída do comando grep, usando um espaço (" ") como delimitador. Isso deve corresponder ao endereço Ethernet da interface de rede.
+
+O efeito geral do script é extrair o endereço Ethernet da primeira interface de rede na máquina. Isso pode ser útil, por exemplo, se você quiser identificar uma máquina com base em seu endereço de interface de rede. Observe que este script assume que o endereço Ethernet está na primeira linha da saída ifconfig que contém a palavra "ether". Se o formato de saída do ifconfig mudar, este script pode precisar ser modificado de acordo.
+
+explicação do segundo
+Isso deve retornar o endereço MAC da sua máquina. O comando ifconfig lista as interfaces de rede, grep 'ether' filtra as linhas que contém a palavra "ether" (que é onde o endereço MAC está listado), e awk '{print $2}' pega a segunda palavra da linha (que é o endereço MAC) e imprime na tela. Cada endereço será exibido em uma nova linha.

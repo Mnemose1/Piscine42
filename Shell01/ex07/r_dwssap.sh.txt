@@ -1,0 +1,25 @@
+cat /etc/passwd | sed '/^#/d' | awk 'NR % 2 == 0 {print $0}' | awk -F ":" '{  print $1 }' | rev | sort -fnr | awk -v FT_LINE1="$FT_LINE1" -v FT_LINE2="$FT_LINE2"  'NR >= FT_LINE1 && NR <= FT_LINE2 { print $0 }' | tr '\n' ' '  | sed 's+ +, +g' | sed 's+, $+.+g' | tr -d '\n'
+
+cat /etc/passwd: Este comando envia o conteúdo do arquivo /etc/passwd para a saída padrão.
+
+sed '/^#/d': Este comando usa sed para excluir quaisquer linhas que comecem com um caractere # (que geralmente são comentários).
+
+awk 'NR % 2 == 0 {print $0}': Este comando usa awk para selecionar todas as outras linhas da saída do comando anterior (começando com a segunda linha) e imprimi-lo. A variável $0 em awk representa toda a linha atual.
+
+awk -F ":" '{ print $1 }': Este comando usa awk para dividir cada linha da saída do comando anterior em campos usando o caractere : como delimitador e, em seguida, imprime o primeiro campo (que é o nome de usuário) .
+
+rev: Este comando inverte a ordem dos caracteres em cada linha da saída do comando anterior.
+
+sort -fnr: Este comando usa sort para classificar a saída do comando anterior na ordem inversa (-r) e ignorando maiúsculas e minúsculas (-f).
+
+awk -v FT_LINE1="$FT_LINE1" -v FT_LINE2="$FT_LINE2" 'NR >= FT_LINE1 && NR <= FT_LINE2 { print $0 }': Este comando usa awk novamente para selecionar apenas as linhas da saída que estão dentro de um intervalo especificado, onde o intervalo é especificado por duas variáveis ​​de ambiente, $FT_LINE1 e $FT_LINE2.
+
+tr '\n' ' ': Este comando usa tr para substituir todos os caracteres de nova linha por espaços.
+
+sed 's+ +, +g': Este comando usa sed para substituir todas as ocorrências de um ou mais espaços por uma vírgula seguida de um espaço.
+
+sed 's+, $+.+g': Este comando usa sed para substituir a última vírgula e o espaço na saída por um ponto.
+
+tr -d '\n': Este comando usa tr para excluir todos os caracteres de nova linha da saída.
+
+Em resumo, este comando seleciona os nomes de usuário do arquivo /etc/passwd, inverte os caracteres em cada nome de usuário, classifica os nomes de usuário em ordem inversa, seleciona um intervalo de nomes de usuário especificado por duas variáveis ​​de ambiente, substitui espaços por vírgulas, substitui a última vírgula com um ponto e exclui todos os caracteres de nova linha. O resultado é uma lista separada por vírgulas de nomes de usuários dentro do intervalo especificado, com o último nome de usuário seguido por um ponto em vez de uma vírgula.
