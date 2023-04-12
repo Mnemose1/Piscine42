@@ -1,0 +1,13 @@
+Use o comando:
+
+echo "find . -type f \( -name "#*#" -o -name "~" \) -print -delete" > clean
+
+Aqui está um detalhamento do comando:
+
+find: a ferramenta de linha de comando que estamos usando para localizar e excluir arquivos
+.: o diretório atual (onde find começará a procurar por arquivos)
+-type f: limita a busca apenas a arquivos (não diretórios)
+\( -name "#*#" -o -name "" \): especifica os critérios para encontrar os arquivos que desejamos excluir. Especificamente, ele procurará arquivos cujos nomes correspondam ao padrão #*# ou ao padrão *. O padrão #*# corresponde a arquivos que começam e terminam com o símbolo # (comumente usado para arquivos de backup do Emacs). O padrão *~ corresponde a arquivos que terminam com um til (geralmente usado para arquivos de backup criados por editores de texto).
+-print: imprime o nome de cada arquivo que corresponde aos critérios especificados no argumento anterior
+-delete: exclui cada arquivo que corresponda aos critérios especificados nos argumentos anteriores.
+Portanto, em resumo, este comando encontrará todos os arquivos no diretório atual e seus subdiretórios cujos nomes correspondem a #*# ou *~, imprimirá os nomes desses arquivos e os excluirá.

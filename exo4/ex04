@@ -1,0 +1,8 @@
+Use o comando:
+echo "ls -tU -m -p" > midLS
+
+O comando "ls" lista os arquivos, o comando -tU classifica por hora de modificação, o comando "-m" separa por vírgula e o "-p" seguidos por uma barra.
+
+Também funciona por:
+
+exho "ls -tUpm" > midLS

@@ -1,0 +1,13 @@
+Abre o text editor (outra instancia, outra janela sabe). Coloca o comando 
+#!/bin/bash
+git ls-files  --exclude-standard --others --ignored
+
+Clica em salvar. Vai na pasta ex06 que tu criou e mude nome o arquivo como: git_ignore.sh
+
+Este é um comando Git que lista todos os arquivos no repositório que atualmente não são rastreados pelo Git (ou seja, arquivos ignorados, arquivos não rastreados e arquivos não ignorados). Aqui está uma análise do comando:
+
+git ls-files: lista todos os arquivos no repositório que são atualmente rastreados pelo Git.
+--exclude-standard: esta opção exclui arquivos que são ignorados pelo Git de acordo com as regras padrão do Gitignore. Isso inclui arquivos que correspondem aos padrões especificados em um arquivo .gitignore ou nos padrões principais do Gitignore.
+--outros: esta opção inclui arquivos não rastreados na saída. Esses são arquivos que não são rastreados atualmente pelo Git e não foram explicitamente ignorados pelo Git.
+--ignored: esta opção inclui arquivos ignorados na saída. Esses são arquivos que correspondem aos padrões especificados em um arquivo .gitignore ou outros arquivos ignorados.
+Portanto, o comando git ls-files --exclude-standard --others --ignored lista todos os arquivos no repositório que não são atualmente rastreados pelo Git, incluindo arquivos ignorados. É um comando útil para verificar quais arquivos serão adicionados ao repositório se você confirmar todas as alterações atualmente presentes no diretório de trabalho.
