@@ -1,1 +1,13 @@
-Cada exercicio deve estar separado dentro de diretórios como diz no exercicio. Diretorio de mesmo nome e o file de mesmo nome, ou a maquina nao ira ler. Faça um git clone com o link oferecido pela maquina com a pasta main do seu exercicio. Coloque os exercicios la. Se for a partir do C deve usar a norminette para avaliar se esta escrito corretamente. Para os Shell nao e necessario. Use os comandos: git add .
+Faça um git clone com o link oferecido pela maquina como a pasta main do seu exercicio. Coloque os exercicios la.
+Cada exercicio deve estar separado dentro de diretórios como diz no exercicio. 
+Diretorio de mesmo nome e o file de mesmo nome, ou a maquina nao ira ler. 
+Se for a partir do C deve usar a norminette para avaliar se esta escrito corretamente. Use o comando norminette antes de enviar para avaliação.
+Para os Shell nao e necessario usar o norminette.
+Use os comandos: git add . ; git commit -m "escreva qualquer coisa aqui" ; git push
+Se quiser confirmar use o comando git status.
+Envie para a avaliação.
+Boa sorte.
+Eu sei que você é capaz.
+
+Extra: Para entrar no exame use o comando examshell. Vai pedir o seu username e a senha. Lembre-se de que a senha não aparece, digite normalmente e dê enter. 
+O comando cc -Wall -Werror -Wextra "nome do seu file" serve para verificar o molinette na prova.
