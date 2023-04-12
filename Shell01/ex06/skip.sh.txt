@@ -1,10 +1,15 @@
 #!/bin/bash
 ls -l | awk 'NR%2==1'
 
-ls -l é um comando que lista os arquivos e diretórios no diretório atual, juntamente com algumas informações adicionais (como permissões, proprietário e tamanho de cada arquivo).
+ls -l é um comando que lista os arquivos e diretórios no diretório atual, juntamente com algumas informações adicionais (como permissões, 
+proprietário e tamanho de cada arquivo).
 
 | é o símbolo de pipe, que pega a saída do comando anterior e a passa como entrada para o próximo comando.
 
-awk 'NR%2==1' é um comando que usa a linguagem de programação AWK para selecionar todas as outras linhas da saída do comando ls, começando com a primeira linha. A variável NR em AWK representa o número da linha atual e % é o operador de módulo. Então NR%2==1 seleciona cada linha onde o número da linha é ímpar (ou seja, tem um resto de 1 quando dividido por 2).
+awk 'NR%2==1' é um comando que usa a linguagem de programação AWK para selecionar todas as outras linhas da saída do comando ls, 
+começando com a primeira linha. A variável NR em AWK representa o número da linha atual e % é o operador de módulo. Então NR%2==1 
+seleciona cada linha onde o número da linha é ímpar (ou seja, tem um resto de 1 quando dividido por 2).
 
-O efeito geral do script é listar os arquivos e diretórios no diretório atual, mas exibir apenas linhas alternadas da saída (começando com a primeira linha). Isso pode ser útil se você quiser tornar a saída do comando ls mais fácil de ler, removendo parte da confusão da saída (como as informações extras que aparecem nas linhas pares).
+O efeito geral do script é listar os arquivos e diretórios no diretório atual, mas exibir apenas linhas alternadas da saída 
+(começando com a primeira linha). Isso pode ser útil se você quiser tornar a saída do comando ls mais fácil de ler, 
+removendo parte da confusão da saída (como as informações extras que aparecem nas linhas pares).
